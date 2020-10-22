@@ -1,0 +1,42 @@
+312CA_Saraev_Stefan_Tema3
+
+Salut!
+
+Aici voi explica cum functioneaza codul meu
+
+=================================Archiver=======================================
+
+* In functia 'main' citesc comenzile si le pasez functiei 'ruleaza_comanda'.
+  Aceasta returneaza '-1' daca a fost introdus 'exit'.
+* 'ruleaza_comanda' va salva parametrii introdusi la 'stdin' in cate un pointer
+  si va executa subprogramele 'create', 'list', 'extract', in functie de ce se
+  cere. Tot aici verific daca parametrii exista, unde este cazul.
+
+===================================Create=======================================
+
+* Pentru a realiza functia create, am urmarit indicatiile din pdf-ul cu enuntul
+  temei referitoare la extragerea inforamtiilor din fisierele 'files.txt' si
+  'usermap.txt'.
+* Imi creez headerul si il completez in functia 'create_header'.
+  * Voi prezenta pe scurt cateva functii folosite pe parcurs:
+    * convert_time: convertesc stringurile cu data si ora in inturile necesare,
+      cu care populez o structura 'tm'. Folosesc 'mktime' ca sa convertesc 'tm'
+      intr un long cu Unix timestamp.
+    * itoa_m: convertesc inturi in stringuri.
+* Scriu in arhiva datele din fisierul curent avand in vedere indicatiile din
+  enuntul temei.
+
+===================================List=========================================
+
+* Pentru a realiza functia list, am parcurs arhiva in felul urmator:
+  * Citesc headerul, afisez numele fisierului
+  * Sar pana la urmatorul header, pana ajung la blocul de 0-uri
+
+==================================Extract=======================================
+
+* Pentru a realiza functia extract, am parcurs arhiva in felul urmator:
+  * Citesc headerul si creez fisierele din arhiva
+  * Scriu in ele continutul, fara sa trec si 0-urile
+* Am folosit functia 'otod', care imi converteste un numar din baza 8 in baza 10
+
+================================================================================
